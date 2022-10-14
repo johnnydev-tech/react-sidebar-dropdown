@@ -2,8 +2,10 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
-import "./Navbar.css";
 import { IconContext } from "react-icons";
+import SentinelaIcon from "../icons/home-icons/not-clicked-icons/icon-1_logoSentinela.svg";
+import "./style.css";
+
 
 function Navbar() {
   const [Item, setItem] = useState(true);
@@ -13,13 +15,17 @@ function Navbar() {
 function checkIsSelected(path) {
   console.log("path: " + path);
   console.log("window.location.pathname: " + window.location.pathname);
-  return window.location.pathname == path;
+  return window.location.pathname === path;
 }
  
   return (
 
       <IconContext.Provider value={{ color: "#fff" }}>
-        <nav className={"nav-menu active"}>
+        <nav className={"nav-menu"}>
+          <ul>
+            <img  className="sentinela-icon" src={SentinelaIcon} alt="icon" />
+          </ul>
+          <hr/>
           <ul className="nav-menu-items" onClick={showItem}>
             {SidebarData.map((item, index) => {
               return (
@@ -29,8 +35,8 @@ function checkIsSelected(path) {
                     to={item.path}
                   onClick={showItem}
                   >
-                    {item.icon}
-                    <span>{item.title}</span>
+                   <img src={!checkIsSelected(item.path)?item.iconClicked:item.icon} alt={item.title} className={checkIsSelected(item.path)? item.selectedcName : item.cName} />
+                    {/* <span>{item.title}</span> */}
                   </Link>
                 </li>
               );

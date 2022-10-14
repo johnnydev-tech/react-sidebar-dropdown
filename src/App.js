@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar/Sidebar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Reports from './pages/Reports';
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar />
+        <Sidebar />
         <Routes>
           <Route path='/' exact component={Home} />
           <Route path='/reports' component={Reports} />

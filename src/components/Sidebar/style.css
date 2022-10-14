@@ -1,0 +1,76 @@
+.menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+}
+
+.nav-menu {
+  background-color: #195c94;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  position: fixed;
+  top: 0;
+  padding: 8px;
+}
+
+.nav-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  list-style: none;
+
+}
+
+.sentinela-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  list-style: none;
+  height: 5rem;
+  width: 5rem;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50px;
+}
+.nav-text img {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+.nav-text a:hover {
+  background-color: #57a5ff39;
+  transition: 0.25s;
+  color: #195c94;
+}
+
+.focus a {
+  background-color: white;
+  color: #195c94;
+  transition: 0.25s;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+span {
+  margin-left: 16px;
+}
